@@ -1,29 +1,31 @@
 package entities;
 
+import java.time.LocalDate;
+
 public class PessoaJuridica {
 
-	private String cnpj;
-	private String inscricao;
+	private Integer cnpj;
+	private Integer inscricao;
 	private String razao;
 	private String fantasia;
 	private String logradouro;
-	private String cep;
-	private String numero;
+	private Integer cep;
+	private Integer numero;
 	private String bairro;
 	private String municipio;
 	private String uf;
-	private String telefone;
+	private Integer telefone;
 	private String email;
-	private String inclusao;
-	private String situacao;
+	private LocalDate inclusao;
+	private LocalDate situacao;
 	
 	public PessoaJuridica() {
 		
 	}
 
-	public PessoaJuridica(String cnpj, String inscricao, String razao, String fantasia, String logradouro, String cep,
-			String numero, String bairro, String municipio, String uf, String telefone, String email, String inclusao,
-			String situacao) {
+	public PessoaJuridica(Integer cnpj, Integer inscricao, String razao, String fantasia, String logradouro, Integer cep,
+			Integer numero, String bairro, String municipio, String uf, Integer telefone, String email, LocalDate inclusao,
+			LocalDate situacao) {
 		super();
 		this.cnpj = cnpj;
 		this.inscricao = inscricao;
@@ -41,19 +43,19 @@ public class PessoaJuridica {
 		this.situacao = situacao;
 	}
 
-	public String getCnpj() {
+	public Integer getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(String cnpj) {
+	public void setCnpj(Integer cnpj) {
 		this.cnpj = cnpj;
 	}
 
-	public String getInscricao() {
+	public Integer getInscricao() {
 		return inscricao;
 	}
 
-	public void setInscricao(String inscricao) {
+	public void setInscricao(Integer inscricao) {
 		this.inscricao = inscricao;
 	}
 
@@ -81,19 +83,19 @@ public class PessoaJuridica {
 		this.logradouro = logradouro;
 	}
 
-	public String getCep() {
+	public Integer getCep() {
 		return cep;
 	}
 
-	public void setCep(String cep) {
+	public void setCep(Integer cep) {
 		this.cep = cep;
 	}
 
-	public String getNumero() {
+	public Integer getNumero() {
 		return numero;
 	}
 
-	public void setNumero(String numero) {
+	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
 
@@ -121,11 +123,11 @@ public class PessoaJuridica {
 		this.uf = uf;
 	}
 
-	public String getTelefone() {
+	public Integer getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(String telefone) {
+	public void setTelefone(Integer telefone) {
 		this.telefone = telefone;
 	}
 
@@ -137,19 +139,27 @@ public class PessoaJuridica {
 		this.email = email;
 	}
 
-	public String getInclusao() {
+	public LocalDate getInclusao() {
 		return inclusao;
 	}
 
-	public void setInclusao(String inclusao) {
+	public void setInclusao(LocalDate inclusao) {
 		this.inclusao = inclusao;
 	}
 
-	public String getSituacao() {
+	public LocalDate getSituacao() {
 		return situacao;
 	}
 
-	public void setSituacao(String situacao) {
+	public void setSituacao(LocalDate situacao) {
 		this.situacao = situacao;
+	}
+
+	@Override
+	public String toString() {
+		return "PessoaJuridica\n{\n   CNPJ: " + cnpj + "\n   Inscricao Estadual: " + inscricao + "\n   Razao: " + razao + "\n   Fantasia: "
+				+ fantasia + "\n   Logradouro: " + logradouro + "\n   CEP: " + cep + "\n   N°: " + numero + "\n   Bairro: " + bairro
+				+ "\n   Municipio: " + municipio + "\n   UF: " + uf + "\n   Telefone: " + telefone + "\n   Email: " + email
+				+ "\n   Inclusao: " + inclusao + "\n   Situacao: " + situacao + "\n]";
 	}
 }

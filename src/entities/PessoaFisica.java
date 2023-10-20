@@ -1,22 +1,24 @@
 package entities;
 
+import java.time.LocalDate;
+
 public class PessoaFisica {
 
 	private String nome;
-	private String rg;
-	private String cpf;
+	private Integer rg;
+	private Integer cpf;
 	private String pai;
 	private String mae;
 	private String cidade;
 	private String estado;
-	private String nascimento;
+	private LocalDate nascimento;
 	
 	public PessoaFisica() {
 		
 	}
 
-	public PessoaFisica(String nome, String rg, String cpf, String pai, String mae, String cidade, String estado,
-			String nascimento) {
+	public PessoaFisica(String nome, Integer rg, Integer cpf, String pai, String mae, String cidade, String estado,
+			LocalDate nascimento) {
 		super();
 		this.nome = nome;
 		this.rg = rg;
@@ -36,19 +38,19 @@ public class PessoaFisica {
 		this.nome = nome;
 	}
 
-	public String getRg() {
+	public Integer getRg() {
 		return rg;
 	}
 
-	public void setRg(String rg) {
+	public void setRg(Integer rg) {
 		this.rg = rg;
 	}
 
-	public String getCpf() {
+	public Integer getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(String cpf) {
+	public void setCpf(Integer cpf) {
 		this.cpf = cpf;
 	}
 
@@ -84,11 +86,17 @@ public class PessoaFisica {
 		this.estado = estado;
 	}
 
-	public String getNascimento() {
+	public LocalDate getNascimento() {
 		return nascimento;
 	}
 
-	public void setNascimento(String nascimento) {
+	public void setNascimento(LocalDate nascimento) {
 		this.nascimento = nascimento;
+	}
+
+	@Override
+	public String toString() {
+		return "PessoaFisica\n{\n   Nome: " + nome + "\n   RG: " + rg + "\n   CPF: " + cpf + "\n   Nome do Pai: " + pai + "\n   Nome da Mãe: " + mae
+				+ "\n   Cidade: " + cidade + "\n   Estado: " + estado + "\n   Data de Nascimento: " + nascimento + "\n}";
 	}
 }
