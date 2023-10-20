@@ -1,18 +1,18 @@
 package client;
 
+import config.DadosPessoaFisica;
 import entities.PessoaFisica;
-import entities.PessoaJuridica;
+import factories.GeradorPessoaFisicaAleatoria;
+import pessoaFactory.PessoaFisicaFactory;
 
 public class Main {
 
 	public static void main(String[] args) {
-
-		PessoaFisica pf = new PessoaFisica();
-		PessoaJuridica pj = new PessoaJuridica();
-		String a = pf.toString();
-		String b = pj.toString();
-		System.out.println(a);
-		System.out.println(b);
+		
+		DadosPessoaFisica dados = new DadosPessoaFisica();
+		PessoaFisicaFactory factory = new GeradorPessoaFisicaAleatoria(dados);
+        PessoaFisica pessoaFicticia = factory.criarPessoaFisica();
+        System.out.println(pessoaFicticia.toString());
 	}
 
 }

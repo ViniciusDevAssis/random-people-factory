@@ -5,8 +5,8 @@ import java.time.LocalDate;
 public class PessoaFisica {
 
 	private String nome;
-	private Integer rg;
-	private Integer cpf;
+	private String rg;
+	private String cpf;
 	private String pai;
 	private String mae;
 	private String cidade;
@@ -17,7 +17,7 @@ public class PessoaFisica {
 		
 	}
 
-	public PessoaFisica(String nome, Integer rg, Integer cpf, String pai, String mae, String cidade, String estado,
+	public PessoaFisica(String nome, String rg, String cpf, String pai, String mae, String cidade, String estado,
 			LocalDate nascimento) {
 		super();
 		this.nome = nome;
@@ -38,19 +38,19 @@ public class PessoaFisica {
 		this.nome = nome;
 	}
 
-	public Integer getRg() {
+	public String getRg() {
 		return rg;
 	}
 
-	public void setRg(Integer rg) {
+	public void setRg(String rg) {
 		this.rg = rg;
 	}
 
-	public Integer getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(Integer cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
