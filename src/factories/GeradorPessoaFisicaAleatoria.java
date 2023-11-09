@@ -41,7 +41,7 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
 	}
 	
 	public String gerarRgAleatorio() {
-		long min = 110011101L;
+		long min = 1110011101L;
         long max = 2099999999L;
 
         Random random = new Random();
@@ -60,7 +60,7 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
     }
 	
 	public String gerarCpfAleatorio() {
-		long min = 110011101L;
+		long min = 1110011101L;
         long max = 9999999999L;
 
         Random random = new Random();
