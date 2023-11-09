@@ -25,7 +25,15 @@ public class DadosPessoaFisica {
 				"Martins", "Medeiros", "Mendes", "Menezes", "Monteiro", "Moreira", "Moura", "Nascimento", "Nogueira", "Nunes", "Oliveira", "Pereira", "Pinto", "Ribeiro", "Rios",
 				"Rocha", "Rodrigues", "Sá", "Sampaio", "Santos", "Silva", "Soares", "Sousa", "Teixeira", "Torres", "Vasconcelos", "Viana", "Vieira", "Xavier", "Assis", "Teles", "Luz");
 
-		cidadesBa = Arrays.asList();
+		cidadesBa = Arrays.asList("Salvador", "Feira de Santana", "Vitória da Conquista", "Camaçari", "Juazeiro", "Itabuna", "Lauro de Freitas", "Ilhéus", "Jequié",
+				"Teixeira de Freitas", "Barreiras", "Alagoinhas", "Porto Seguro", "Simões Filho", "Paulo Afonso", "Eunápolis", "Santo Antônio de Jesus", "Valença",
+				"Luís Eduardo Magalhães", "Guanambi", "Serrinha", "Senhor do Bonfim", "Jacobina", "Irecê", "Candeias", "Gandu", "Dias d'Ávila", "Brumado", "Cruz das Almas",
+				"Ipirá", "Catu", "Cafarnaum", "Coaraci", "Santo Amaro", "Campo Formoso", "Itamaraju", "Itapetinga", "Bom Jesus da Lapa", "Conceição do Coité", "Itaberaba",
+				"Ribeira do Pombal", "Madre de Deus", "Mata de São João", "Poções", "São Sebastião do Passé", "São Francisco do Conde", "Seabra", "Xique-Xique", "Jaguaquara",
+				"Santa Maria da Vitória", "Lauro de Freitas", "Livramento de Nossa Senhora", "Amargosa", "Itacaré", "Mucuri", "Entre Rios", "Curaçá", "Saubara", "Esplanada",
+				"Ipiaú", "Maragogipe", "Santo Estêvão", "Morro do Chapéu", "Nova Viçosa", "Paripiranga", "Piritiba", "Prado", "Remanso", "Riachão do Jacuípe", "Rio Real",
+				"Sapeaçu", "Sátiro Dias", "Taperoá", "Uauá", "Ubaíra", "Ubaitaba", "Ubatã", "Una", "Urandi", "Uruçuca", "Valente", "Vera Cruz", "Wenceslau Guimarães");
+
 		estados = Arrays.asList("BA");
 	}
 

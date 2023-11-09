@@ -1,5 +1,7 @@
 package factories;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
@@ -22,6 +24,11 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
 		pessoa.setNome(gerarNomeAleatorio());
 		pessoa.setRg(gerarRgAleatorio());
 		pessoa.setCpf(gerarCpfAleatorio());
+		pessoa.setPai(gerarNomeAleatorioPai());
+		pessoa.setMae(gerarNomeAleatorioMae());
+		pessoa.setCidade(selecionarCidadeAleatoria());
+		pessoa.setEstado(selecionarEstadoAleatorio());
+		pessoa.setNascimento(gerarDataAleatoria());
 		return pessoa;
 	}
 	
@@ -38,6 +45,48 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
         String sobrenome2 = sobrenomes.get(indiceSobrenome2);
         String nomeCompleto = nome + " " + sobrenome1 + " " + sobrenome2;
         return nomeCompleto;
+	}
+	
+	public String gerarNomeAleatorioPai() {
+		List<String> nomes = dados.getNomes();
+        List<String> sobrenomes = dados.getSobrenomes();
+        String nome = nomes.get(random.nextInt(nomes.size()));
+        int indiceSobrenome1 = random.nextInt(sobrenomes.size());
+        int indiceSobrenome2;
+        do {
+            indiceSobrenome2 = random.nextInt(sobrenomes.size());
+        } while (indiceSobrenome2 == indiceSobrenome1);
+        String sobrenome1 = sobrenomes.get(indiceSobrenome1);
+        String sobrenome2 = sobrenomes.get(indiceSobrenome2);
+        String nomeCompleto = nome + " " + sobrenome1 + " " + sobrenome2;
+        return nomeCompleto;
+	}
+	
+	public String gerarNomeAleatorioMae() {
+		List<String> nomes = dados.getNomes();
+        List<String> sobrenomes = dados.getSobrenomes();
+        String nome = nomes.get(random.nextInt(nomes.size()));
+        int indiceSobrenome1 = random.nextInt(sobrenomes.size());
+        int indiceSobrenome2;
+        do {
+            indiceSobrenome2 = random.nextInt(sobrenomes.size());
+        } while (indiceSobrenome2 == indiceSobrenome1);
+        String sobrenome1 = sobrenomes.get(indiceSobrenome1);
+        String sobrenome2 = sobrenomes.get(indiceSobrenome2);
+        String nomeCompleto = nome + " " + sobrenome1 + " " + sobrenome2;
+        return nomeCompleto;
+	}
+	
+	public String selecionarCidadeAleatoria() {
+		List<String> cidades = dados.getCidadesBa();
+		String cidade = cidades.get(random.nextInt(cidades.size()));
+		return cidade;
+	}
+	
+	public String selecionarEstadoAleatorio() {
+		List<String> estados = dados.getEstados();
+		String estado = estados.get(random.nextInt(estados.size()));
+		return estado;
 	}
 	
 	public String gerarRgAleatorio() {
@@ -77,4 +126,19 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
         }
         return numeroFormatado;
     }
+	
+
+	public String gerarDataAleatoria() {
+		Calendar calendar = Calendar.getInstance();
+		int ano = random.nextInt(124) + 1900;
+		calendar.set(Calendar.YEAR, ano);
+		int mes = random.nextInt(12);
+		calendar.set(Calendar.MONTH, mes);
+		int maxDias = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+		int dia = random.nextInt(maxDias) + 1;
+		calendar.set(Calendar.DAY_OF_MONTH, dia);
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+		String data = formato.format(calendar.getTime());
+		return data;
+	}
 }

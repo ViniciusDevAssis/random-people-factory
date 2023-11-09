@@ -1,7 +1,5 @@
 package entities;
 
-import java.time.LocalDate;
-
 public class PessoaFisica {
 
 	private String nome;
@@ -11,14 +9,14 @@ public class PessoaFisica {
 	private String mae;
 	private String cidade;
 	private String estado;
-	private LocalDate nascimento;
+	private String nascimento;
 	
 	public PessoaFisica() {
 		
 	}
 
 	public PessoaFisica(String nome, String rg, String cpf, String pai, String mae, String cidade, String estado,
-			LocalDate nascimento) {
+			String nascimento) {
 		super();
 		this.nome = nome;
 		this.rg = rg;
@@ -86,11 +84,11 @@ public class PessoaFisica {
 		this.estado = estado;
 	}
 
-	public LocalDate getNascimento() {
+	public String getNascimento() {
 		return nascimento;
 	}
 
-	public void setNascimento(LocalDate nascimento) {
+	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
 	}
 
