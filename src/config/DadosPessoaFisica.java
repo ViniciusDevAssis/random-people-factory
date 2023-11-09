@@ -6,6 +6,8 @@ import java.util.List;
 public class DadosPessoaFisica {
 
 	private List<String> nomes;
+	private List<String> nomesMaes;
+	private List<String> nomesPais;
 	private List<String> sobrenomes;
 	private List<String> cidadesBa;
 	private List<String> estados;
@@ -19,6 +21,20 @@ public class DadosPessoaFisica {
 				"Arthur", "Enzo Gabriel", "Levi", "Valentina", "Cecília", "Vitor", "Breno", "Caio", "Clara", "Esther", "Isadora", "João Miguel", "Lorenzo", "Luana", "Maria Alice",
 				"Maria Cecília", "Maria Eduarda", "Maria Fernanda", "Maria Helena", "Maria Júlia", "Maria Luiza", "Maria Sophia", "Mariana", "Martin", "Matheus", "Miguel", "Noah",
 				"Pedro Henrique", "Pietro", "Rafael", "Samuel", "Sophia", "Theo", "Thomas", "Vitor Hugo", "Vitoria", "Jefferson");
+		
+		nomesMaes = Arrays.asList("Ana", "Beatriz", "Carolina", "Daniela", "Eduarda", "Fernanda", "Gabriela", "Helena", "Isabela", "Juliana", "Kátia", "Larissa", "Mariana",
+				"Natália", "Olívia", "Patrícia", "Quitéria", "Renata", "Simone", "Tatiane", "Ursula", "Valéria", "Wanda", "Ximena", "Yara", "Zuleide", "Alice", "Bianca", "Clara",
+				"Diana", "Elisa", "Flávia", "Giovana", "Heloísa", "Ivete", "Janaína", "Karine", "Lorena", "Manuela", "Nádia", "Oliveira", "Priscila", "Queila", "Rafaela", "Sueli",
+                "Tânia", "Umbelina", "Vanessa", "Waleska", "Xuxa", "Yasmin", "Zara", "Amanda", "Barbara", "Camila", "Débora", "Érica", "Fabiana", "Gabrielle", "Hellen", "Ingrid", 
+                "Jéssica", "Kamila", "Lívia", "Márcia", "Natalie", "Orquídea", "Priscilla", "Quezia", "Rosa", "Silvana", "Tamires", "Ursulina", "Vitória", "Wendy", "Xenia", "Yasmine", 
+                "Zilda", "Adriana", "Bruna", "Cíntia", "Dora", "Eliane", "Fátima", "Gisele", "Hilda", "Izabel", "Júlia", "Kelly", "Luzia",  "Marta", "Nara", "Odete", "Patrícia", "Quitéria");
+		
+		nomesPais = Arrays.asList("André", "Bruno", "Carlos", "Daniel", "Eduardo", "Fábio", "Gabriel", "Hugo", "Igor", "João", "Kleber", "Lucas", "Mateus", "Nelson", "Otávio",
+                "Paulo", "Quirino", "Rafael", "Samuel", "Thiago", "Ulisses", "Vinícius", "Wagner", "Xavier", "Yago", "Zélio", "Alex", "Bernardo", "Cauã", "Diego", "Elton",
+                "Felipe", "Gustavo", "Henrique", "Ícaro", "Júlio", "Kaique", "Leonardo", "Miguel", "Nathan", "Oscar", "Pedro", "Quincy", "Raul", "Sérgio", "Túlio", "Ubirajara",
+                "Vitor", "Wilian", "Xandão", "Yuri", "Zacarias", "Alan", "Breno", "Caio", "Davi", "Erick", "Fernando", "Guilherme", "Heitor", "Iago", "Jefferson", "Kelvin",
+                "Luciano", "Marcos", "Nícolas", "Otto", "Pablo", "Quintino", "Rodrigo", "Simão", "Tomás", "Ulysses", "Vicente", "William", "Xisto", "Ygor", "Zacarias", "Aldo",
+                "Boris", "Cícero", "Dante", "Enzo", "Frederico", "Giovanni", "Hélio", "Isaac", "Joaquim", "Kenzo", "Luan", "Mário", "Nando", "Orlando", "Pietro", "Quaresma");
 		
 		sobrenomes = Arrays.asList("Almeida", "Alves", "Andrade", "Araújo", "Azevedo", "Barbosa", "Barros", "Batista", "Borges", "Campos", "Cardoso", "Carvalho", "Castro",
 				"Costa", "Dias", "Duarte", "Fernandes", "Ferreira", "Fonseca", "Freitas", "Garcia", "Gomes", "Gonçalves", "Guimarães", "Lima", "Lopes", "Machado", "Marques",
@@ -39,6 +55,14 @@ public class DadosPessoaFisica {
 
 	public List<String> getNomes() {
 		return nomes;
+	}
+	
+	public List<String> getNomesMaes() {
+		return nomesMaes;
+	}
+	
+	public List<String> getNomesPais() {
+		return nomesPais;
 	}
 
 	public List<String> getSobrenomes() {

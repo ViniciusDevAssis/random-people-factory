@@ -1,6 +1,7 @@
 package factories;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
@@ -13,6 +14,7 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
 
 	private Random random = new Random();
 	private DadosPessoaFisica dados;
+	List<String> sobrenomesPais = new ArrayList<>();
 
     public GeradorPessoaFisicaAleatoria(DadosPessoaFisica dados) {
         this.dados = dados;
@@ -41,16 +43,17 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
         do {
             indiceSobrenome2 = random.nextInt(sobrenomes.size());
         } while (indiceSobrenome2 == indiceSobrenome1);
-        String sobrenome1 = sobrenomes.get(indiceSobrenome1);
-        String sobrenome2 = sobrenomes.get(indiceSobrenome2);
+        String sobrenome1 = sobrenomesPais.get(0);
+        String sobrenome2 = sobrenomesPais.get(1);
+        
         String nomeCompleto = nome + " " + sobrenome1 + " " + sobrenome2;
         return nomeCompleto;
 	}
 	
 	public String gerarNomeAleatorioPai() {
-		List<String> nomes = dados.getNomes();
+		List<String> nomesPais = dados.getNomesPais();
         List<String> sobrenomes = dados.getSobrenomes();
-        String nome = nomes.get(random.nextInt(nomes.size()));
+        String nome = nomesPais.get(random.nextInt(nomesPais.size()));
         int indiceSobrenome1 = random.nextInt(sobrenomes.size());
         int indiceSobrenome2;
         do {
@@ -58,14 +61,15 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
         } while (indiceSobrenome2 == indiceSobrenome1);
         String sobrenome1 = sobrenomes.get(indiceSobrenome1);
         String sobrenome2 = sobrenomes.get(indiceSobrenome2);
+        sobrenomesPais.add(1, sobrenome2);
         String nomeCompleto = nome + " " + sobrenome1 + " " + sobrenome2;
         return nomeCompleto;
 	}
 	
 	public String gerarNomeAleatorioMae() {
-		List<String> nomes = dados.getNomes();
+		List<String> nomesMaes = dados.getNomesMaes();
         List<String> sobrenomes = dados.getSobrenomes();
-        String nome = nomes.get(random.nextInt(nomes.size()));
+        String nome = nomesMaes.get(random.nextInt(nomesMaes.size()));
         int indiceSobrenome1 = random.nextInt(sobrenomes.size());
         int indiceSobrenome2;
         do {
@@ -73,6 +77,7 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
         } while (indiceSobrenome2 == indiceSobrenome1);
         String sobrenome1 = sobrenomes.get(indiceSobrenome1);
         String sobrenome2 = sobrenomes.get(indiceSobrenome2);
+        sobrenomesPais.add(0, sobrenome2);
         String nomeCompleto = nome + " " + sobrenome1 + " " + sobrenome2;
         return nomeCompleto;
 	}
