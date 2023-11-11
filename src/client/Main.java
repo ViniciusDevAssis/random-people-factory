@@ -3,7 +3,7 @@ package client;
 import config.DadosPessoaFisica;
 import entities.PessoaFisica;
 import factories.GeradorPessoaFisicaAleatoria;
-import pessoaFactory.PessoaFisicaFactory;
+import PessoaFactory.PessoaFisicaFactory;
 
 public class Main {
 

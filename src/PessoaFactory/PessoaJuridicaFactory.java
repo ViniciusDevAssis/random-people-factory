@@ -1,4 +1,4 @@
-package pessoaFactory;
+package PessoaFactory;
 
 import entities.PessoaJuridica;
 

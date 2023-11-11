@@ -8,7 +8,7 @@ import java.util.Random;
 
 import config.DadosPessoaFisica;
 import entities.PessoaFisica;
-import pessoaFactory.PessoaFisicaFactory;
+import PessoaFactory.PessoaFisicaFactory;
 
 public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
 
@@ -23,11 +23,11 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
 	@Override
 	public PessoaFisica criarPessoaFisica() {
 		PessoaFisica pessoa = new PessoaFisica();
+		pessoa.setMae(gerarNomeAleatorioMae());
+		pessoa.setPai(gerarNomeAleatorioPai());
 		pessoa.setNome(gerarNomeAleatorio());
 		pessoa.setRg(gerarRgAleatorio());
 		pessoa.setCpf(gerarCpfAleatorio());
-		pessoa.setPai(gerarNomeAleatorioPai());
-		pessoa.setMae(gerarNomeAleatorioMae());
 		pessoa.setCidade(selecionarCidadeAleatoria());
 		pessoa.setEstado(selecionarEstadoAleatorio());
 		pessoa.setNascimento(gerarDataAleatoria());
@@ -61,7 +61,7 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
         } while (indiceSobrenome2 == indiceSobrenome1);
         String sobrenome1 = sobrenomes.get(indiceSobrenome1);
         String sobrenome2 = sobrenomes.get(indiceSobrenome2);
-        sobrenomesPais.add(1, sobrenome2);
+        sobrenomesPais.add(sobrenome2);
         String nomeCompleto = nome + " " + sobrenome1 + " " + sobrenome2;
         return nomeCompleto;
 	}
@@ -77,7 +77,7 @@ public class GeradorPessoaFisicaAleatoria implements PessoaFisicaFactory{
         } while (indiceSobrenome2 == indiceSobrenome1);
         String sobrenome1 = sobrenomes.get(indiceSobrenome1);
         String sobrenome2 = sobrenomes.get(indiceSobrenome2);
-        sobrenomesPais.add(0, sobrenome2);
+        sobrenomesPais.add(sobrenome2);
         String nomeCompleto = nome + " " + sobrenome1 + " " + sobrenome2;
         return nomeCompleto;
 	}
